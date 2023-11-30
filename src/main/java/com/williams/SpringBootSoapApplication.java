@@ -22,7 +22,7 @@ public class SpringBootSoapApplication {
 		SpringApplication.run(SpringBootSoapApplication.class, args);
 	}
 
-	@Bean
+/*	@Bean
 	CommandLineRunner init(SoapClient soapClient){
 		return args -> {
 			AddResponse add = soapClient.addMethod(4,67);
@@ -37,5 +37,5 @@ public class SpringBootSoapApplication {
 
 		};
 	}
-
+*/
 }
