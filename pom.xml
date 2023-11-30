@@ -65,7 +65,8 @@
 						</goals>
 					</execution>
 				</executions>
-				<configuration>
+				<!-- For Url schema -->
+				<!--<configuration>
 					<schemaLanguage>WSDL</schemaLanguage>
 					<generateDirectory>${project.basedir}/src/main/java</generateDirectory>
 					<generatePackage>com.williams.wsdl</generatePackage>
@@ -74,7 +75,19 @@
 							<url>http://www.dneonline.com/calculator.asmx?WSDL</url>
 						</schema>
 					</schemas>
+				</configuration>-->
+
+				<!-- For File schema -->
+				<configuration>
+					<schemaLanguage>WSDL</schemaLanguage>
+					<schemaDirectory>${project.basedir}/src/main/java/resources/wsdl</schemaDirectory>
+					<schemas>
+						<schemaFiles>CalculatorApi.wsdl</schemaFiles>
+						<pakageName>com.williams.wsdl</pakageName>
+						<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+					</schemas>
 				</configuration>
+
 			</plugin>
 		</plugins>
 	</build>
